@@ -3,11 +3,11 @@ package smart_city_management_system.Hospital_Management;
 import smart_city_management_system.MenuPanel;
 
 public class Hospital_Management_System extends javax.swing.JFrame {
-    
+
     public Hospital_Management_System() {
         initComponents();
     }
-    
+
     @SuppressWarnings("unchecked")
     // <editor-fold defaultstate="collapsed" desc="Generated Code">//GEN-BEGIN:initComponents
     private void initComponents() {
@@ -31,7 +31,7 @@ public class Hospital_Management_System extends javax.swing.JFrame {
         title2.setForeground(new java.awt.Color(255, 255, 204));
         title2.setText("WELCOME TO HOSPITAL  MANAGEMENT SYSTEM");
 
-        Image2.setIcon(new javax.swing.ImageIcon(getClass().getResource("/smart_city_management_system/Hospital Management.png"))); // NOI18N
+        Image2.setIcon(new javax.swing.ImageIcon(getClass().getResource("/smart_city_management_system/Hospital Management (3).png"))); // NOI18N
 
         AddPatient.setBackground(new java.awt.Color(255, 255, 204));
         AddPatient.setFont(new java.awt.Font("Segoe UI Black", 1, 18)); // NOI18N
@@ -164,7 +164,6 @@ public class Hospital_Management_System extends javax.swing.JFrame {
     }//GEN-LAST:event_AddPatientActionPerformed
 
     private void ViewPatientActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_ViewPatientActionPerformed
-        // TODO add your handling code here:
         this.dispose();
         new ViewPatient().setVisible(true);
     }//GEN-LAST:event_ViewPatientActionPerformed
@@ -174,13 +173,11 @@ public class Hospital_Management_System extends javax.swing.JFrame {
     }//GEN-LAST:event_exitActionPerformed
 
     private void backActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_backActionPerformed
-        // TODO add your handling code here:
         this.dispose();
         new MenuPanel().setVisible(true);
     }//GEN-LAST:event_backActionPerformed
 
     private void AddDoctorActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_AddDoctorActionPerformed
-        // TODO add your handling code here:
         this.dispose();
         new AddDoctor().setVisible(true);
     }//GEN-LAST:event_AddDoctorActionPerformed
@@ -189,7 +186,7 @@ public class Hospital_Management_System extends javax.swing.JFrame {
         // TODO add your handling code here:
         this.dispose();
         new ViewDoctor().setVisible(true);
-        
+
 
     }//GEN-LAST:event_ViewDoctorActionPerformed
 

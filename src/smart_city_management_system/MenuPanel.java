@@ -1,10 +1,16 @@
 package smart_city_management_system;
+
 import smart_city_management_system.Citizen_Management.Citizen_Management_System;
 import smart_city_management_system.Hospital_Management.Hospital_Management_System;
+import smart_city_management_system.Education_Management.Education_Management_System;
+import smart_city_management_system.Tourism_Management.Tourism_Management_System;
+
 public class MenuPanel extends javax.swing.JFrame {
+
     public MenuPanel() {
         initComponents();
     }
+
     @SuppressWarnings("unchecked")
     // <editor-fold defaultstate="collapsed" desc="Generated Code">//GEN-BEGIN:initComponents
     private void initComponents() {
@@ -151,10 +157,14 @@ public class MenuPanel extends javax.swing.JFrame {
 
     private void educationManagementActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_educationManagementActionPerformed
         // TODO add your handling code here:
+        this.dispose();
+        new Education_Management_System().setVisible(true);
     }//GEN-LAST:event_educationManagementActionPerformed
 
     private void tourismManagementActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_tourismManagementActionPerformed
         // TODO add your handling code here:
+        this.dispose();
+        new Tourism_Management_System().setVisible(true);
     }//GEN-LAST:event_tourismManagementActionPerformed
 
     private void exitActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_exitActionPerformed
