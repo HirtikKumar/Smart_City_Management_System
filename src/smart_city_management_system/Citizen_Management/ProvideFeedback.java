@@ -6,10 +6,13 @@ import java.io.FileNotFoundException;
 import java.io.FileWriter;
 import java.io.IOException;
 import java.util.Scanner;
+
 public class ProvideFeedback extends javax.swing.JFrame {
+
     public ProvideFeedback() {
         initComponents();
     }
+
     @SuppressWarnings("unchecked")
     // <editor-fold defaultstate="collapsed" desc="Generated Code">//GEN-BEGIN:initComponents
     private void initComponents() {
@@ -160,6 +163,8 @@ public class ProvideFeedback extends javax.swing.JFrame {
     }// </editor-fold>//GEN-END:initComponents
 
     private void registerActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_registerActionPerformed
+        Boolean data0 = false;
+        Boolean data1 = false;
         if (IdInput.getText().equals("")) {
             message.setForeground(Color.white);
             message.setText("Id Required !!");
@@ -177,27 +182,38 @@ public class ProvideFeedback extends javax.swing.JFrame {
                 while (myReader.hasNextLine()) {
                     String line = myReader.nextLine();
                     String[] data = line.split(",");
-                    if (data[0].equals(IdInput.getText()) && data[1].equals(NameInput.getText())) {
-                        message.setForeground(Color.green);
-                        message.setText("Success");
-                        FileWriter importWriter = null;
+                    System.out.println(data[0] + " " + data[1]);
+                    if (data[0].equals(IdInput.getText())) {
+                        data0 = true;
+                        System.out.println(data0);
+//                       
 
-                        try {
-                            importWriter = new FileWriter("Feedbacks.txt", true);
-                            importWriter.write(IdInput.getText() + ",");
-                            importWriter.write(NameInput.getText() + ",");
-                            importWriter.write(FeedbackInput.getText() + "\n");
-                            importWriter.close();
-                        } catch (IOException e) {
-                            System.out.println("An error occurred.");
-                            e.printStackTrace();
-                        }
-                    } else {
-                        message.setForeground(Color.green);
-                        message.setText("Citizen is not registered");
                     }
-                    myReader.close();
+                    if (data[1].equals(NameInput.getText())) {
+                        data1 = true;
+                        System.out.println(data1);
+                    }
                 }
+                if (data0 && data1) {
+                    message.setForeground(Color.green);
+                    message.setText("Success");
+                    FileWriter importWriter = null;
+
+                    try {
+                        importWriter = new FileWriter("Feedbacks.txt", true);
+                        importWriter.write(IdInput.getText() + ",");
+                        importWriter.write(NameInput.getText() + ",");
+                        importWriter.write(FeedbackInput.getText() + "\n");
+                        importWriter.close();
+                    } catch (IOException e) {
+                        System.out.println("An error occurred.");
+                        e.printStackTrace();
+                    }
+                } else {
+                    message.setForeground(Color.green);
+                    message.setText("Citizen is not registered");
+                }
+                myReader.close();
             } catch (FileNotFoundException e) {
                 System.out.println("An error occurred.");
                 e.printStackTrace();
