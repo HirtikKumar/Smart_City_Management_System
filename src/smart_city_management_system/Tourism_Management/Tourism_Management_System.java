@@ -30,8 +30,8 @@ public class Tourism_Management_System extends javax.swing.JFrame {
         jPanel3 = new javax.swing.JPanel();
         title2 = new javax.swing.JLabel();
         Image2 = new javax.swing.JLabel();
-        admin = new javax.swing.JButton();
-        user = new javax.swing.JButton();
+        AddTouristAttraction = new javax.swing.JButton();
+        ViewTouristAttraction = new javax.swing.JButton();
         exit = new javax.swing.JButton();
         back = new javax.swing.JButton();
 
@@ -46,23 +46,23 @@ public class Tourism_Management_System extends javax.swing.JFrame {
 
         Image2.setIcon(new javax.swing.ImageIcon(getClass().getResource("/smart_city_management_system/Tourism Management.png"))); // NOI18N
 
-        admin.setBackground(new java.awt.Color(255, 255, 204));
-        admin.setFont(new java.awt.Font("Segoe UI Black", 1, 18)); // NOI18N
-        admin.setForeground(new java.awt.Color(102, 0, 0));
-        admin.setText("Admin");
-        admin.addActionListener(new java.awt.event.ActionListener() {
+        AddTouristAttraction.setBackground(new java.awt.Color(255, 255, 204));
+        AddTouristAttraction.setFont(new java.awt.Font("Segoe UI Black", 1, 18)); // NOI18N
+        AddTouristAttraction.setForeground(new java.awt.Color(102, 0, 0));
+        AddTouristAttraction.setText("Add Tourist Attraction");
+        AddTouristAttraction.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
-                adminActionPerformed(evt);
+                AddTouristAttractionActionPerformed(evt);
             }
         });
 
-        user.setBackground(new java.awt.Color(255, 255, 204));
-        user.setFont(new java.awt.Font("Segoe UI Black", 1, 18)); // NOI18N
-        user.setForeground(new java.awt.Color(102, 0, 0));
-        user.setText("User");
-        user.addActionListener(new java.awt.event.ActionListener() {
+        ViewTouristAttraction.setBackground(new java.awt.Color(255, 255, 204));
+        ViewTouristAttraction.setFont(new java.awt.Font("Segoe UI Black", 1, 18)); // NOI18N
+        ViewTouristAttraction.setForeground(new java.awt.Color(102, 0, 0));
+        ViewTouristAttraction.setText("View Tourist Attraction");
+        ViewTouristAttraction.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
-                userActionPerformed(evt);
+                ViewTouristAttractionActionPerformed(evt);
             }
         });
 
@@ -103,8 +103,8 @@ public class Tourism_Management_System extends javax.swing.JFrame {
                         .addGap(18, 18, 18)
                         .addGroup(jPanel3Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING, false)
                             .addComponent(exit, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
-                            .addComponent(admin, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
-                            .addComponent(user, javax.swing.GroupLayout.PREFERRED_SIZE, 255, javax.swing.GroupLayout.PREFERRED_SIZE))))
+                            .addComponent(AddTouristAttraction, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
+                            .addComponent(ViewTouristAttraction, javax.swing.GroupLayout.PREFERRED_SIZE, 255, javax.swing.GroupLayout.PREFERRED_SIZE))))
                 .addContainerGap(82, Short.MAX_VALUE))
         );
         jPanel3Layout.setVerticalGroup(
@@ -121,9 +121,9 @@ public class Tourism_Management_System extends javax.swing.JFrame {
                         .addContainerGap())
                     .addGroup(jPanel3Layout.createSequentialGroup()
                         .addGap(81, 81, 81)
-                        .addComponent(admin)
+                        .addComponent(AddTouristAttraction)
                         .addGap(43, 43, 43)
-                        .addComponent(user)
+                        .addComponent(ViewTouristAttraction)
                         .addGap(50, 50, 50)
                         .addComponent(exit)
                         .addContainerGap(javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE))))
@@ -145,15 +145,17 @@ public class Tourism_Management_System extends javax.swing.JFrame {
         pack();
     }// </editor-fold>//GEN-END:initComponents
 
-    private void adminActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_adminActionPerformed
+    private void AddTouristAttractionActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_AddTouristAttractionActionPerformed
         // TODO add your handling code here:
         this.dispose();
-    }//GEN-LAST:event_adminActionPerformed
+        new AddTouristAttraction().setVisible(true);
+    }//GEN-LAST:event_AddTouristAttractionActionPerformed
 
-    private void userActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_userActionPerformed
-        // TODO add your handling code here:
+    private void ViewTouristAttractionActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_ViewTouristAttractionActionPerformed
         this.dispose();
-    }//GEN-LAST:event_userActionPerformed
+        new ViewTouristAttraction().setVisible(true);
+
+    }//GEN-LAST:event_ViewTouristAttractionActionPerformed
 
     private void exitActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_exitActionPerformed
         this.dispose();
@@ -202,12 +204,12 @@ public class Tourism_Management_System extends javax.swing.JFrame {
     }
 
     // Variables declaration - do not modify//GEN-BEGIN:variables
+    private javax.swing.JButton AddTouristAttraction;
     private javax.swing.JLabel Image2;
-    private javax.swing.JButton admin;
+    private javax.swing.JButton ViewTouristAttraction;
     private javax.swing.JButton back;
     private javax.swing.JButton exit;
     private javax.swing.JPanel jPanel3;
     private javax.swing.JLabel title2;
-    private javax.swing.JButton user;
     // End of variables declaration//GEN-END:variables
 }
