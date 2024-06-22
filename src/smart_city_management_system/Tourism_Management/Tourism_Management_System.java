@@ -34,6 +34,8 @@ public class Tourism_Management_System extends javax.swing.JFrame {
         ViewTouristAttraction = new javax.swing.JButton();
         exit = new javax.swing.JButton();
         back = new javax.swing.JButton();
+        AddTourismAlerts = new javax.swing.JButton();
+        ViewTourismAlerts = new javax.swing.JButton();
 
         setDefaultCloseOperation(javax.swing.WindowConstants.EXIT_ON_CLOSE);
 
@@ -86,6 +88,26 @@ public class Tourism_Management_System extends javax.swing.JFrame {
             }
         });
 
+        AddTourismAlerts.setBackground(new java.awt.Color(255, 255, 204));
+        AddTourismAlerts.setFont(new java.awt.Font("Segoe UI Black", 1, 18)); // NOI18N
+        AddTourismAlerts.setForeground(new java.awt.Color(102, 0, 0));
+        AddTourismAlerts.setText("Add Tourism Alerts");
+        AddTourismAlerts.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                AddTourismAlertsActionPerformed(evt);
+            }
+        });
+
+        ViewTourismAlerts.setBackground(new java.awt.Color(255, 255, 204));
+        ViewTourismAlerts.setFont(new java.awt.Font("Segoe UI Black", 1, 18)); // NOI18N
+        ViewTourismAlerts.setForeground(new java.awt.Color(102, 0, 0));
+        ViewTourismAlerts.setText("View Tourism Alerts");
+        ViewTourismAlerts.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                ViewTourismAlertsActionPerformed(evt);
+            }
+        });
+
         javax.swing.GroupLayout jPanel3Layout = new javax.swing.GroupLayout(jPanel3);
         jPanel3.setLayout(jPanel3Layout);
         jPanel3Layout.setHorizontalGroup(
@@ -104,7 +126,9 @@ public class Tourism_Management_System extends javax.swing.JFrame {
                         .addGroup(jPanel3Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING, false)
                             .addComponent(exit, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
                             .addComponent(AddTouristAttraction, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
-                            .addComponent(ViewTouristAttraction, javax.swing.GroupLayout.PREFERRED_SIZE, 255, javax.swing.GroupLayout.PREFERRED_SIZE))))
+                            .addComponent(ViewTouristAttraction, javax.swing.GroupLayout.PREFERRED_SIZE, 255, javax.swing.GroupLayout.PREFERRED_SIZE)
+                            .addComponent(AddTourismAlerts, javax.swing.GroupLayout.PREFERRED_SIZE, 255, javax.swing.GroupLayout.PREFERRED_SIZE)
+                            .addComponent(ViewTourismAlerts, javax.swing.GroupLayout.PREFERRED_SIZE, 255, javax.swing.GroupLayout.PREFERRED_SIZE))))
                 .addContainerGap(82, Short.MAX_VALUE))
         );
         jPanel3Layout.setVerticalGroup(
@@ -124,9 +148,13 @@ public class Tourism_Management_System extends javax.swing.JFrame {
                         .addComponent(AddTouristAttraction)
                         .addGap(43, 43, 43)
                         .addComponent(ViewTouristAttraction)
-                        .addGap(50, 50, 50)
+                        .addGap(43, 43, 43)
+                        .addComponent(AddTourismAlerts)
+                        .addGap(43, 43, 43)
+                        .addComponent(ViewTourismAlerts)
+                        .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
                         .addComponent(exit)
-                        .addContainerGap(javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE))))
+                        .addGap(118, 118, 118))))
         );
 
         javax.swing.GroupLayout layout = new javax.swing.GroupLayout(getContentPane());
@@ -168,6 +196,18 @@ public class Tourism_Management_System extends javax.swing.JFrame {
         new MenuPanel().setVisible(true);
     }//GEN-LAST:event_backActionPerformed
 
+    private void AddTourismAlertsActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_AddTourismAlertsActionPerformed
+        // TODO add your handling code here:
+        this.dispose();
+        new AddTourismAlerts().setVisible(true);
+    }//GEN-LAST:event_AddTourismAlertsActionPerformed
+
+    private void ViewTourismAlertsActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_ViewTourismAlertsActionPerformed
+        // TODO add your handling code here:
+        this.dispose();
+        new ViewTourismAlerts().setVisible(true);
+    }//GEN-LAST:event_ViewTourismAlertsActionPerformed
+
     /**
      * @param args the command line arguments
      */
@@ -204,8 +244,10 @@ public class Tourism_Management_System extends javax.swing.JFrame {
     }
 
     // Variables declaration - do not modify//GEN-BEGIN:variables
+    private javax.swing.JButton AddTourismAlerts;
     private javax.swing.JButton AddTouristAttraction;
     private javax.swing.JLabel Image2;
+    private javax.swing.JButton ViewTourismAlerts;
     private javax.swing.JButton ViewTouristAttraction;
     private javax.swing.JButton back;
     private javax.swing.JButton exit;
